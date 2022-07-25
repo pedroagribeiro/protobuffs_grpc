@@ -1,0 +1,14 @@
+syntax = "proto3";
+package proto;
+option go_package = "github.com/pedroagribeiro/bbwf/dhcp;dhcp";
+
+service SubscriberStatsService {
+    rpc GetSubscriberStats (Empty) returns (SubscriberStats) {}
+}
+
+message Empty {}
+
+message SubscriberStats {
+    int32 active = 1;
+    int32 total = 2;
+}
